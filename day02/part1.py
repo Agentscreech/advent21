@@ -26,5 +26,24 @@ down 8 adds 8 to your depth, resulting in a value of 10.
 forward 2 adds 2 to your horizontal position, a total of 15.
 After following these instructions, you would have a horizontal position of 15 and a depth of 10. (Multiplying these together produces 150.)
 
-Calculate the horizontal position and depth you would have after following the planned course. What do you get if you multiply your final horizontal position by your final depth?"""
+Calculate the horizontal position and depth you would have after following the planned course. What do you get if you multiply your final horizontal position by your final depth?
+"""
 
+def parse_input(input: str) -> tuple:
+    i = input.split(' ')
+    return (i[0], int(i[1]))
+    
+
+def run():
+    lines = read_line_input("day02")
+    x = 0
+    y = 0
+    for line in lines:
+        direction, distance = parse_input(line)
+        if direction == 'up':
+            y -= distance
+        elif direction == 'down':
+            y += distance
+        elif direction == 'forward':
+            x += distance
+    print(x * y)
