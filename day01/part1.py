@@ -40,7 +40,7 @@ sample = [199,200,208,210,200,207,240,269,260,263]
 
 
 def run():
-    lines = read_line_input('day01')
+    lines = read_input('day01')
     # lines = sample
     prev = int(lines[0])
     count = 0

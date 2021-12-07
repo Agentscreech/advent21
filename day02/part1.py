@@ -35,7 +35,7 @@ def parse_input(input: str) -> tuple:
     
 
 def run():
-    lines = read_line_input("day02")
+    lines = read_input("day02")
     x = 0
     y = 0
     for line in lines:

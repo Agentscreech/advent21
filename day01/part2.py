@@ -35,7 +35,7 @@ Consider sums of a three-measurement sliding window. How many sums are larger th
 """
 
 def run():
-    lines = [int(x) for x in read_line_input('day01')]
+    lines = [int(x) for x in read_input('day01')]
     prev_sum = sum(lines[:3])
     count = 0
     for idx in range(3,len(lines)+1):
