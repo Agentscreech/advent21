@@ -28,3 +28,11 @@ def read_input_comma_int(day: str) -> List[int]:
         vals[i] = int(value)
 
     return vals
+
+def read_sample_input(day:str) -> List[str]:
+    lines = []
+    with open(f"{day}/sample_input.txt") as file:
+        for line in file:
+            lines.append(line)
+
+    return lines

@@ -6,7 +6,11 @@
 # import day02.part2 as d2p2
 # d2.run()
 # d2p2.run()
-import day03.part1 as d3
-import day03.part2 as d3p2
-d3.run()
-d3p2.run()
+# import day03.part1 as d3
+# import day03.part2 as d3p2
+# d3.run()
+# d3p2.run()
+# import day04.part1 as d4
+import day04.part2 as d4p2
+# d4.run()
+d4p2.run()
