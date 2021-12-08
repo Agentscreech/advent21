@@ -48,17 +48,13 @@ def isolate_numbers(numbers:list, filter, target_idx=0) -> list:
             else:
                 zeros += 1
                 epsilon.append(line)
-        # if filter == "high" and ones == zeros:
-        #     return gamma
-        # if filter == "low" and zeros == ones:
-            # return epsilon
         if filter == "high":
             if ones >= zeros:
                 numbers = isolate_numbers(gamma, filter, target_idx+1)
             else:
                 numbers = isolate_numbers(epsilon, filter, target_idx+1)    
         if filter == "low":
-            if zeros <= ones:
+            if ones >= zeros:
                 numbers = isolate_numbers(epsilon, filter, target_idx+1)
             else:
                 numbers = isolate_numbers(gamma, filter, target_idx+1)
@@ -71,8 +67,6 @@ def run():
     numbers = deepcopy([x.strip() for x in lines])
     oxygen_generator_rating = int(isolate_numbers(numbers, "high")[0], 2)
     #find the CO2 scrubber rating
-    # numbers = deepcopy([x.strip() for x in lines])
-    # numbers = isolate_numbers(numbers, "low")
     CO2_scrubber_rating = int(isolate_numbers(numbers, "low")[0], 2)
     #find the life support rating
     life_support_rating = oxygen_generator_rating * CO2_scrubber_rating
