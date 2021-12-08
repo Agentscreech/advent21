@@ -1,5 +1,5 @@
 from helpers.read_lines import *
-lines = read_input('input.txt')
+lines = read_input('day03')
 
 """The diagnostic report (your puzzle input) consists of a list of binary numbers which, when decoded properly, can tell you many useful things about the conditions of the submarine. The first parameter to check is the power consumption.
 
@@ -33,9 +33,23 @@ Use the binary numbers in your diagnostic report to calculate the gamma rate and
 
 """
 
-#int(str, 2)
-
-
 
 def run():
-    pass
+    gamma = ""
+    epsilon = ""
+    for i in range(len(lines[0])-1):
+        ones = 0
+        zeros = 0
+        for line in lines:
+            if line[i] == '1':
+                ones += 1
+            else:
+                zeros += 1
+        if ones > zeros:
+            gamma += '1'
+            epsilon += '0'
+        else:
+            gamma += '0'
+            epsilon += '1'
+    print(int(gamma, 2) * int(epsilon, 2))
+        

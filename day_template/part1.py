@@ -1,5 +1,5 @@
 from helpers.read_lines import *
-lines = read_input('input.txt')
+lines = read_input('dayXX')
 """
 
 """
