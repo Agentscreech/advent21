@@ -11,6 +11,13 @@
 # d3.run()
 # d3p2.run()
 # import day04.part1 as d4
-import day04.part2 as d4p2
+# import day04.part2 as d4p2
 # d4.run()
-d4p2.run()
+# d4p2.run()
+import day05.part1 as d5
+# import day05.part2 as d5p2
+d5.run()
+# d5p2.run()
+
+
+
